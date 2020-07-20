@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet';
 
 import App from '../src/App';
 
-const PORT = process.env.PORT || 3007;
+const PORT = process.env.PORT || 3006;
 const app = express();
 
 app.get('/', (req, res) => {
@@ -26,7 +26,7 @@ app.get('/*', (req, res) => {
   return ssr(req, res, false);
 });
  
-app.listen(PORT,'127.0.0.1', () => {
+app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
 

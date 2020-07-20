@@ -72,7 +72,7 @@
     "test": "node scripts/test.js",
     "dev:build-server": "NODE_ENV=development webpack --config webpack.server.js --mode=development",
     "dev:start": "nodemon ./server-build/index.js",
-    "dev": "npm-run-all clean build dev:*",
+    "dev": "cross-env PORT=8080 npm-run-all clean build dev:build-server dev:start",
     "start:prod": "cross-env PORT=8080 NODE_ENV=production pm2 startOrReload ecosystem.config.js —update-env",
     "list": "pm2 list",
     "logs": "pm2 logs"
